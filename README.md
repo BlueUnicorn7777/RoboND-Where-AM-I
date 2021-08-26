@@ -1,6 +1,6 @@
-# RoboND-go-chase-it
+# RoboND-Where-Am-I
 To run -
-- cd /RoboND-go-chase-it/catkin_ws 
+- cd /RoboND-Where-Am-I/catkin_ws 
 - cd src && catkin_init_workspace
 - cd ../catkin_ws 
 - catkin_make
@@ -8,7 +8,14 @@ To run -
 - roslaunch my_robot world.launch
 - 
 - open a new terminal
-- cd /RoboND-go-chase-it/catkin_ws 
+- cd /RoboND-Where-Am-I/catkin_ws 
 - source devel/setup.bash
-- roslaunch ball_chaser ball_chaser.launch 
+- roslaunch roslaunch my_robot amcl.launch 
+
+- open a new terminal
+- cd /RoboND-Where-Am-I/catkin_ws 
+- source devel/setup.bash
+- rosrun teleop_twist_keyboard teleop_twist_keyboard.py 
+
+
 
