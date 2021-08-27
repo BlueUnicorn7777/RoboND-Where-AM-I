@@ -8,22 +8,48 @@
 
 <node name="amcl" pkg="amcl" type="amcl" output="screen">
     <remap from="scan" to="scan"/>
+
+    <!-- Odometry -->
+
     <param name="odom_frame_id" value="odom"/>
     <param name="odom_model_type" value="diff-corrected"/>
     <param name="base_frame_id" value="robot_footprint"/>
     <param name="global_frame_id" value="map"/>
-    <param name="initial_pose_x" value="0"/>
-    <param name="initial_pose_y" value="0"/>
-    <param name="initial_pose_a" value="0"/>
-    <param name="min_particles" value="500"/>
-    <param name="max_particles" value="3000"/>
+    <param name="odom_alpha1" value="0.1"/>
+    <param name="odom_alpha2" value="0.1"/>
+    <param name="odom_alpha3" value="0.1"/>
+    <param name="odom_alpha4" value="0.1"/>
+    <!-- pose -->
+    <param name="initial_pose_x" value="0.849"/>
+    <param name="initial_pose_y" value="1.3"/>
+    <param name="initial_pose_a" value="-1.674"/>
+    
+    
+     <!-- Filter -->
 
-<!--
+    <param name="min_particles" value="10"/>
+    <param name="max_particles" value="500"/>
+    <param name="update_min_a" value="1"/>
     <param name="update_min_d" value="0.01"/>
-    <param name="update_min_a" value="0.005"/>
-    <param name="use_map_topic" value="false"/>
-    <param name="laser_min_range" value="0.4"/> 
+
+    <!-- Laser -->
+    
+     <param name="laser_max_beams" value="30"/>
+     <param name="laser_z_rand" value="0.05"/>
+     <param name="laser_z_hit" value="0.95"/>
+     <param name="laser_min_range" value="0.4"/> 
+ 
+    
       
+<!--
+
+    
+
+<param name="use_map_topic" value="false"/>
+<param name="min_particles" value="10"/>
+<param name="max_particles" value="300"/>
+<param name="update_min_d" value="0.01"/>
+<param name="update_min_a" value="0.3"/>
 -->
 
 </node>
